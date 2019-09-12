@@ -1,4 +1,4 @@
-//			#CLIENTES#
+//			#CLIENTES#			//
 
 object ludmila { 
 	
@@ -28,14 +28,14 @@ var property pago = 22
 }
 
 object melina {
-var property cliente 
+var property cliente = null
 
 	method pago() {
 		return cliente.pago() - 3
 	}	
 }
 
-//			#REMISERAS#
+//			#REMISERAS#			//
 
 object roxana {
 	
@@ -71,9 +71,38 @@ object juana {
 }
 
 object lucia {
-var property reemplaza
+var property reemplaza = null
 	
 	method tarifa(cliente,kms) {
 		return reemplaza.tarifa(cliente,kms)
+	}
+}
+
+//			#OFICINA#			//
+
+object oficina {
+	
+	method asignarRemiseras(remisera1,remisera2) {
+		
+	}
+	
+	method cambiarPrimerRemiseraPor(remisera) {
+		self.asignarRemiseras(remisera1,remisera2)
+		remisera1 = remisera
+	}
+	
+	method cambiarSegundaRemiseraPor(remisera) {
+		self.asignarRemiseras(remisera1,remisera2)
+		remisera2 = remisera
+	}
+	
+	method intercambiarRemiseras() {
+		self.asignarRemiseras(remisera1,remisera2) 
+		remisera1 = remisera2
+		remisera2 = remisera1
+	}
+	
+	method remiseraElegidaParaViaje(cliente,kms) {
+		 
 	}
 }
